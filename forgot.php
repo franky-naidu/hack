@@ -1,9 +1,11 @@
 <?php
+
+//import all the required classes
  require './model/connection.php'; 
  require './assets/phpmailer/PHPMailerAutoload.php';
  require './model/sendmail.php';
  
-
+//check if we have username set
   if(isset($_POST)&& isset($_POST["username"])){
 
       $username = mysqli_real_escape_string($con,$_POST["username"]);
